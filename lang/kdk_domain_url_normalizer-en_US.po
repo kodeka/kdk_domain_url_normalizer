@@ -1,0 +1,35 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Domain URL Normalizer (by Kodeka)\n"
+"POT-Creation-Date: 2016-01-12 00:00:00+00:00\n"
+"PO-Revision-Date: 2016-01-12 00:00:00+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Last-Translator: \n"
+"Language: en_US\n"
+"Language-Team: Kodeka\n"
+
+msgid "No"
+msgstr "No"
+
+msgid "Yes"
+msgstr "Yes"
+
+msgid "Example (domain per line):&#10;example.com&#10;www2.example.com&#10;www2.example.com:8080"
+msgstr "Example (domain per line):&#10;example.com&#10;www2.example.com&#10;www2.example.com:8080"
+
+msgid "Example: http://www.example.com"
+msgstr "Example: http://www.example.com"
+
+msgid "Options"
+msgstr "Options"
+
+msgid "Enabled"
+msgstr "Enabled"
+
+msgid "Domain URLs to match (do not include http:// or https:// - add each domain per line)"
+msgstr "Domain URLs to match (do not include http:// or https:// - add each domain per line)"
+
+msgid "Domain URL to replace with (MUST include http:// or https:// - no trailing slash)"
+msgstr "Domain URL to replace with (MUST include http:// or https:// - no trailing slash)"
