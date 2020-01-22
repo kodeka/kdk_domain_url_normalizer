@@ -40,6 +40,11 @@ Last Update: January 2020
 - Add new *.ini based language file
 
 
+## Installation
+
+Download the repo from https://github.com/kodeka/kdk_domain_url_normalizer/archive/master.zip and extract the zip file. Rename the created folder to "kdk_domain_url_normalizer". Zip that folder. Install the newly created zip file like any other WordPress plugin through the plugin manager.
+
+
 ## License & Credits
 
 Licensed under the GNU/GPL license (https://www.gnu.org/copyleft/gpl.html).
