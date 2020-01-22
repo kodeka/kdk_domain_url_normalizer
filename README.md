@@ -1,4 +1,4 @@
-# KDK Domain URL Normalizer (v1.1.0)
+# KDK Domain URL Normalizer (v1.1.0 / Jan 2020)
 
 A simple plugin to rewrite multiple domains or subdomains to a single domain in the site's HTML output.
 
@@ -30,8 +30,6 @@ if (in_array($_SERVER['HTTP_HOST'], unserialize(KDK_WP_SECONDARY_DOMAINS))) {
 define('COOKIE_DOMAIN', '.domain.tld');
 ```
 - When you want to switch your site from HTTP to HTTPS and you want all internal resources to be properly linked through HTTPS as well.
-
-Last Update: January 2020
 
 
 ## To Do

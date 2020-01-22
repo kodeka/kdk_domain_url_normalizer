@@ -3,10 +3,10 @@
  * Plugin Name:  KDK Domain URL Normalizer (by Kodeka)
  * Plugin URI:   https://github.com/kodeka/kdk_domain_url_normalizer
  * Description:  A simple plugin to rewrite multiple domains or subdomains to a single domain (domain URL normalization) in the site's HTML output.
- * Version:     1.1.0
- * Author:      Kodeka
- * Author URI:  https://kodeka.io
- * License:     GNU/GPL https://www.gnu.org/copyleft/gpl.html
+ * Version:      1.0.0
+ * Author:       Kodeka
+ * Author URI:   https://kodeka.io
+ * License:      GNU/GPL https://www.gnu.org/copyleft/gpl.html
  */
 
 // Exit if accessed directly
