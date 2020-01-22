@@ -10,19 +10,20 @@ Some practical uses:
 - Allow the WordPress admin to be served from a different subdomain (e.g. when WordPress is served over a CDN and you want to avoid any caching of static data etc.). This would require passing on multiple domains/subdomains in your wp-config.php file like so:
 ```
 // Map multiple domains in WordPress
-$primary_domain = 'www.domain.tld';
-$secondary_domains = array(
+define('KDK_WP_PRIMARY_DOMAIN', 'www.domain.tld');
+define('KDK_WP_SECONDARY_DOMAINS', serialize(array(
     'www2.domain.tld',
     'admin.domain.tld',
     'whatever.domain.tld'
-);
+)));
+define('KDK_WP_DOMAIN_PROTOCOL', 'https');
 
-if(in_array($_SERVER['HTTP_HOST'], $secondary_domains)){
-    define('WP_HOME', 'https://'.$_SERVER['HTTP_HOST']);
-    define('WP_SITEURL', 'https://'.$_SERVER['HTTP_HOST']);
+if (in_array($_SERVER['HTTP_HOST'], unserialize(KDK_WP_SECONDARY_DOMAINS))) {
+    define('WP_HOME', KDK_WP_DOMAIN_PROTOCOL.'://'.$_SERVER['HTTP_HOST']);
+    define('WP_SITEURL', KDK_WP_DOMAIN_PROTOCOL.'://'.$_SERVER['HTTP_HOST']);
 } else {
-    define('WP_HOME', 'https://'.$primary_domain);
-    define('WP_SITEURL', 'https://'.$primary_domain);
+    define('WP_HOME', KDK_WP_DOMAIN_PROTOCOL.'://'.KDK_WP_PRIMARY_DOMAIN);
+    define('WP_SITEURL', KDK_WP_DOMAIN_PROTOCOL.'://'.KDK_WP_PRIMARY_DOMAIN);
 }
 
 // Share cookies across subdomains
