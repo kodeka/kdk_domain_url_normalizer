@@ -16,11 +16,6 @@ if (!defined('ABSPATH')) {
 
 function kdk_domain_url_normalizer_callback($buffer)
 {
-    // Prevent execution
-    if (is_admin() || strpos($_SERVER['REQUEST_URI'], 'wp-login.php') !== false || defined('STDIN')) {
-        //return $buffer;
-    }
-
     $options = get_option('kdk_domain_url_normalizer_options');
     $enabled = isset($options['enabled']) && $options['enabled'] ? true : false;
     $urls = isset($options['urls']) && trim($options['urls']) != '' ? explode(PHP_EOL, $options['urls']) : null;
@@ -71,10 +66,15 @@ function kdk_domain_url_normalizer_end()
     }
 }
 
-//add_action('wp_head', 'kdk_domain_url_normalizer_start', 1);
-//add_action('wp_footer', 'kdk_domain_url_normalizer_end', 1);
-add_action('after_setup_theme', 'kdk_domain_url_normalizer_start', 999998);
-add_action('shutdown', 'kdk_domain_url_normalizer_end', 999999);
+// Control execution
+if (is_admin() || strpos($_SERVER['REQUEST_URI'], 'wp-login.php') !== false || defined('STDIN')) {
+    // Do nothing
+} else {
+    //add_action('wp_head', 'kdk_domain_url_normalizer_start', 1);
+    //add_action('wp_footer', 'kdk_domain_url_normalizer_end', 1);
+    add_action('after_setup_theme', 'kdk_domain_url_normalizer_start', 999998);
+    add_action('shutdown', 'kdk_domain_url_normalizer_end', 999999);
+}
 
 function kdk_domain_url_normalizer_settings_menu()
 {
