@@ -1,12 +1,12 @@
 <?php
 /*
- * Plugin Name: Domain URL Normalizer (by Kodeka)
- * Plugin URI: https://kodeka.io
- * Description: A simple plugin to rewrite multiple domains or subdomains to a single domain in the site's HTML output. The plugin can also normalize the domain protocol (http:// to https:// and vice versa) as well as additional ports (e.g. example.com:8080 to www.example.com). Comes handy especially when WordPress is served over a CDN and you want the WP admin to be served from a different subdomain to avoid caching. Or when you want to serve your site over HTTPS and you want all internal resources to be properly linked through HTTPS as well.
- * Version: 1.1.0
- * Author: Kodeka
- * Author URI: https://kodeka.io
- * License: GNU/GPL v2
+ * Plugin Name:  KDK Domain URL Normalizer (by Kodeka)
+ * Plugin URI:   https://github.com/kodeka/kdk_domain_url_normalizer
+ * Description:  A simple plugin to rewrite multiple domains or subdomains to a single domain (domain URL normalization) in the site's HTML output.
+ * Version:     1.1.0
+ * Author:      Kodeka
+ * Author URI:  https://kodeka.io
+ * License:     GNU/GPL https://www.gnu.org/copyleft/gpl.html
  */
 
 // Exit if accessed directly
