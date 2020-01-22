@@ -35,7 +35,7 @@ Last Update: January 2020
 
 
 ## To Do
-- Add option for caching (home/inner pages)
+- Add option to control caching (home/inner pages)
 - Add option for executing in the backend
 - Add new *.ini based language file
 
